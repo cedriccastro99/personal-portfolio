@@ -23,7 +23,7 @@ const Experience = () => {
       company: "DNA Micro Inc.",
       period: `Mar 2023 • Mar 2025 (${getDuration(new Date("2022-09-01"), new Date("2025-03-01"))})`,
       description: "",
-      technologies: ["React", "JavaScript", "TypeScript", "Webpack", "Tailwind", "NodeJs", "ExpressJs", "Docker", "Restify", "RethinkDB", "NestJs", "PHP", "Linux"],
+      technologies: ["React", "JavaScript", "TypeScript", "Webpack", "Tailwind", "NodeJs", "ExpressJs", "Docker", "Restify", "RethinkDB", "ElasticSearch", "NestJs", "PHP", "Linux"],
     },
   ];
 
