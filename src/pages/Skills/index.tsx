@@ -90,7 +90,12 @@ const Skills = () => {
       <h5 className='font-bold border-b-1 py-2'>skills & tools</h5>
       <div className='flex flex-wrap gap-1 py-2'>
         {skills?.map(skill => (
-          <Badge key={skill.name} variant='outline'>
+          <Badge
+            key={skill.name}
+            variant='outline'
+            className='transition duration-200 cursor-pointer
+                 hover:bg-blue-100 hover:border-blue-400
+                 dark:hover:bg-blue-800 dark:hover:border-blue-600'>
             {skill.icon} {skill.name}
           </Badge>
         ))}
