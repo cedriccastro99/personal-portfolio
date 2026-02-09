@@ -98,23 +98,14 @@ const Skills = () => {
 
   return (
     <section className='w-full'>
-      <h5 className='font-bold border-b py-2'>Skills & Tools</h5>
+      <h5 className='font-bold border-b py-2'>skills & tools</h5>
 
       <div
-        className='
-      grid gap-4 py-2
-      grid-cols-1
-      sm:grid-cols-2
-      lg:grid-cols-3
-      xl:grid-cols-3
-    '>
+        className='grid gap-4 py-2 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3'>
         {skillCategories.map(category => (
           <div
             key={category.title}
-            className='
-          border rounded-xl p-3
-          bg-muted/30
-        '>
+            className='border rounded-xl p-3 bg-muted/30'>
             <h6 className='text-sm font-semibold mb-2'>{category.title}</h6>
 
             <div className='flex flex-wrap gap-1'>
@@ -122,12 +113,7 @@ const Skills = () => {
                 <Badge
                   key={skill.name}
                   variant='outline'
-                  className='
-                flex items-center gap-1
-                transition duration-200 cursor-pointer
-                hover:bg-blue-100 hover:border-blue-400
-                dark:hover:bg-blue-800 dark:hover:border-blue-600
-              '>
+                  className='flex items-center gap-1 transition duration-200 cursor-pointer hover:bg-blue-100 hover:border-blue-400 dark:hover:bg-blue-800 dark:hover:border-blue-600'>
                   {skill.icon}
                   {skill.name}
                 </Badge>
