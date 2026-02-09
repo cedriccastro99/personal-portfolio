@@ -24,84 +24,116 @@ import {
   ReactOriginal as ReactIcon,
   ReduxOriginal as ReduxIcon,
   TailwindcssOriginal as TailwindIcon,
-  TypescriptOriginal as TypescriptIcon,
+  TypescriptOriginal as TypescriptIcon
 } from 'devicons-react'
 
-const RethinkDbIcon = 'https://www.stackhero.io/assets/src/images/servicesLogos/openGraphVersions/rethinkdb.png?e21d717c'
+const RethinkDbIcon =
+  'https://www.stackhero.io/assets/src/images/servicesLogos/openGraphVersions/rethinkdb.png?e21d717c'
 
 const Skills = () => {
-  const skills = [
+  const skillCategories = [
     {
-      name: 'JavaScript',
-      icon: <JavascriptIcon />
+      title: 'Frontend',
+      skills: [
+        { name: 'HTML', icon: <HtmlIcon /> },
+        { name: 'CSS', icon: <CssIcon /> },
+        { name: 'JavaScript', icon: <JavascriptIcon /> },
+        { name: 'TypeScript', icon: <TypescriptIcon /> },
+        { name: 'ReactJs', icon: <ReactIcon /> },
+        { name: 'Redux', icon: <ReduxIcon /> },
+        { name: 'jQuery', icon: <JqueryIcon /> },
+        { name: 'Tailwind', icon: <TailwindIcon /> },
+        { name: 'Bootstrap', icon: <BootstrapIcon /> }
+      ]
     },
     {
-      name: 'Html',
-      icon: <HtmlIcon />
+      title: 'Backend',
+      skills: [
+        { name: 'NodeJs', icon: <NodejsIcon /> },
+        { name: 'Express', icon: <ExpressIcon /> },
+        { name: 'NestJs', icon: <NestjsIcon /> },
+        { name: 'PHP', icon: <PhpIcon /> },
+        { name: 'GraphQL', icon: <GraphqlIcon /> }
+      ]
     },
     {
-      name: 'Css',
-      icon: <CssIcon />
+      title: 'Databases & Search',
+      skills: [
+        { name: 'PostgreSQL', icon: <PostgresqlIcon /> },
+        { name: 'MySQL', icon: <MysqlIcon /> },
+        { name: 'MongoDB', icon: <MongodbIcon /> },
+        {
+          name: 'RethinkDB',
+          icon: <img src={RethinkDbIcon} className='w-3.5 h-3.5' />
+        },
+        { name: 'ElasticSearch', icon: <ElasticsearchIcon /> }
+      ]
     },
     {
-      name: 'TypeScript',
-      icon: <TypescriptIcon />
+      title: 'DevOps & Infrastructure',
+      skills: [
+        { name: 'Docker', icon: <DockerIcon /> },
+        { name: 'Linux', icon: <LinuxIcon /> }
+      ]
     },
     {
-      name: 'NodeJs',
-      icon: <NodejsIcon />
+      title: 'Version Control',
+      skills: [
+        { name: 'Git', icon: <GitIcon /> },
+        { name: 'GitHub', icon: <GithubIcon /> },
+        { name: 'GitLab', icon: <GitlabIcon /> },
+        { name: 'BitBucket', icon: <BitbucketIcon /> }
+      ]
     },
     {
-      name: 'ReactJs',
-      icon: <ReactIcon />
-    },
-    { name: 'Redux', icon: <ReduxIcon /> },
-    {
-      name: 'PHP',
-      icon: <PhpIcon />
-    },
-    { name: '', icon: <CIcon /> },
-    { name: 'jQuery', icon: <JqueryIcon /> },
-    {
-      name: 'Express',
-      icon: <ExpressIcon />
-    },
-    {
-      name: 'NestJs',
-      icon: <NestjsIcon />
-    },
-    {
-      name: 'GraphQL',
-      icon: <GraphqlIcon />
-    },
-    { name: 'Tailwind', icon: <TailwindIcon /> },
-    { name: 'Bootstrap', icon: <BootstrapIcon /> },
-    { name: 'PostgreSQL', icon: <PostgresqlIcon /> },
-    { name: 'MySQL', icon: <MysqlIcon /> },
-    { name: 'RethinkDB', icon: <img src={RethinkDbIcon} alt='RethinkDB' className='w-3.5 h-3.5' /> },
-    { name: 'MongoDB', icon: <MongodbIcon /> },
-    { name: 'ElasticSearch', icon: <ElasticsearchIcon /> },
-    { name: 'Docker', icon: <DockerIcon /> },
-    { name: 'Git', icon: <GitIcon /> },
-    { name: 'GitHub', icon: <GithubIcon /> },
-    { name: 'GitLab', icon: <GitlabIcon /> },
-    { name: 'BitBucket', icon: <BitbucketIcon /> },
-    { name: 'Linux', icon: <LinuxIcon /> }
+      title: 'Programming Languages',
+      skills: [
+        { name: '', icon: <CIcon /> },
+        { name: 'JavaScript', icon: <JavascriptIcon /> },
+        { name: 'TypeScript', icon: <TypescriptIcon /> },
+        { name: 'PHP', icon: <PhpIcon /> }
+      ]
+    }
   ]
 
   return (
-    <section>
-      <h5 className='font-bold border-b-1 py-2'>skills & tools</h5>
-      <div className='flex flex-wrap gap-1 py-2'>
-        {skills?.map(skill => (
-          <Badge
-            key={skill.name}
-            variant='outline'
-            className='transition duration-200 cursor-pointer
-                 hover:bg-blue-100 hover:border-blue-400
-                 dark:hover:bg-blue-800 dark:hover:border-blue-600'>
-            {skill.icon} {skill.name}
-          </Badge>
+    <section className='w-full'>
+      <h5 className='font-bold border-b py-2'>Skills & Tools</h5>
+
+      <div
+        className='
+      grid gap-4 py-2
+      grid-cols-1
+      sm:grid-cols-2
+      lg:grid-cols-3
+      xl:grid-cols-3
+    '>
+        {skillCategories.map(category => (
+          <div
+            key={category.title}
+            className='
+          border rounded-xl p-3
+          bg-muted/30
+        '>
+            <h6 className='text-sm font-semibold mb-2'>{category.title}</h6>
+
+            <div className='flex flex-wrap gap-1'>
+              {category.skills.map(skill => (
+                <Badge
+                  key={skill.name}
+                  variant='outline'
+                  className='
+                flex items-center gap-1
+                transition duration-200 cursor-pointer
+                hover:bg-blue-100 hover:border-blue-400
+                dark:hover:bg-blue-800 dark:hover:border-blue-600
+              '>
+                  {skill.icon}
+                  {skill.name}
+                </Badge>
+              ))}
+            </div>
+          </div>
         ))}
       </div>
     </section>

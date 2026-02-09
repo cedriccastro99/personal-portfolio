@@ -1,6 +1,10 @@
 const Footer = () => {
   return (
-      <footer className="pt-10 flex justify-center text-sm font-light">{`Cedric Castro © ${new Date().getFullYear()}`}</footer>
+    <footer className="mt-16 py-6 text-center text-xs text-muted-foreground border-t">
+      <p>
+        © {new Date().getFullYear()} Cedric Castro
+      </p>
+    </footer>
   )
 }
 
