@@ -1,18 +1,65 @@
+import { Button } from '@/components/ui/button'
+import { GithubIcon } from 'lucide-react'
+import { LinkedinPlain, NpmPlain } from 'devicons-react'
+
 const Contact = () => {
   return (
-    <section>
-      <h5 className='font-bold border-b-1 py-2 pb-2 mb-4'>contact</h5>
-      <div className='space-y-2 text-sm text-muted-foreground'>
+    <section className='space-y-4'>
+      <h5 className='text-sm font-semibold tracking-tight border-b pb-2'>
+        Contact
+      </h5>
+
+      <div className='text-sm text-muted-foreground space-y-1 leading-relaxed'>
         <p>I’m open to opportunities and collaborations.</p>
 
         <p>
-          You can reach me at{' '}
+          Email: {' '}
           <a
             href='mailto:castro.cedric@outlook.com'
             className='underline underline-offset-4 hover:text-foreground transition-colors'>
             castro.cedric@outlook.com
           </a>
         </p>
+
+        <p>Location: Based in Cebu, Philippines</p>
+
+        <div className='flex items-center justify-center'>
+          <ul className='mt-4 flex gap-2'>
+            <li>
+              <Button
+                className='cursor-pointer'
+                variant='outline'
+                size='sm'
+                onClick={() =>
+                  window.open('https://github.com/cedriccastro99')
+                }>
+                <GithubIcon />
+              </Button>
+            </li>
+            <li>
+              <Button
+                className='cursor-pointer'
+                variant='outline'
+                size='sm'
+                onClick={() =>
+                  window.open('https://www.linkedin.com/in/cedric-castro/')
+                }>
+                <LinkedinPlain />
+              </Button>
+            </li>
+            <li>
+              <Button
+                className='cursor-pointer'
+                variant='outline'
+                size='sm'
+                onClick={() =>
+                  window.open('https://www.npmjs.com/~cedriccastro')
+                }>
+                <NpmPlain />
+              </Button>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   )

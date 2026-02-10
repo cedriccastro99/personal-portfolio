@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
-import { Download, Github, Linkedin } from "lucide-react"
+import { Download, GithubIcon } from "lucide-react"
+import { NpmPlain, LinkedinPlain } from 'devicons-react'
 import ResumePdf from "/RESUME_CEDRIC_CASTRO.pdf"
 
 const Home = () => {
@@ -24,12 +25,17 @@ const Home = () => {
           </li>
           <li>
             <Button className="cursor-pointer" variant="outline" size="sm" onClick={() => window.open('https://github.com/cedriccastro99')}>
-              <Github />
+              <GithubIcon />
             </Button>
           </li>
           <li>
             <Button className="cursor-pointer" variant="outline" size="sm" onClick={() => window.open('https://www.linkedin.com/in/cedric-castro/')}>
-              <Linkedin />
+              <LinkedinPlain />
+            </Button>
+          </li>
+          <li>
+            <Button className="cursor-pointer" variant="outline" size="sm" onClick={() => window.open('https://www.npmjs.com/~cedriccastro')}>
+              <NpmPlain />
             </Button>
           </li>
         </ul>

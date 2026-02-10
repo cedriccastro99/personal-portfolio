@@ -1,4 +1,5 @@
 import { Badge } from '@/components/ui/badge'
+import RethinkDbIcon from '@/assets/png/rethinkdb_icon.png'
 import {
   BitbucketOriginal as BitbucketIcon,
   BootstrapOriginal as BootstrapIcon,
@@ -26,9 +27,6 @@ import {
   TailwindcssOriginal as TailwindIcon,
   TypescriptOriginal as TypescriptIcon
 } from 'devicons-react'
-
-const RethinkDbIcon =
-  'https://www.stackhero.io/assets/src/images/servicesLogos/openGraphVersions/rethinkdb.png?e21d717c'
 
 const Skills = () => {
   const skillCategories = [
