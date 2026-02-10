@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section className='space-y-4'>
       <h5 className='text-sm font-semibold tracking-tight border-b pb-2'>
-        Contact
+        contact
       </h5>
 
       <div className='text-sm text-muted-foreground space-y-1 leading-relaxed'>
