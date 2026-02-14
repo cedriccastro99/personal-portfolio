@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import { GithubIcon } from 'lucide-react'
+import { GithubIcon, Mail, MapPin } from 'lucide-react'
 import { LinkedinPlain, NpmPlain } from 'devicons-react'
 
 const Contact = () => {
@@ -12,16 +12,20 @@ const Contact = () => {
       <div className='text-sm text-muted-foreground space-y-1 leading-relaxed'>
         <p>I’m open to opportunities and collaborations.</p>
 
-        <p>
-          Email: {' '}
-          <a
-            href='mailto:castro.cedric@outlook.com'
-            className='underline underline-offset-4 hover:text-foreground transition-colors'>
-            castro.cedric@outlook.com
-          </a>
-        </p>
+      <p className="flex items-center gap-2">
+        <Mail className="w-4 h-4" /> :
+        <a
+          href="mailto:castro.cedric@outlook.com"
+          className="underline underline-offset-4 hover:text-foreground transition-colors"
+        >
+          castro.cedric@outlook.com
+        </a>
+      </p>
 
-        <p>Location: Based in Cebu, Philippines</p>
+      <p className="flex items-center gap-2">
+        <MapPin className="w-4 h-4" /> :
+        <span>Based in Cebu, Philippines</span>
+      </p>
 
         <div className='flex items-center justify-center'>
           <ul className='mt-4 flex gap-2'>

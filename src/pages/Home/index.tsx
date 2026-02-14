@@ -20,7 +20,7 @@ const Home = () => {
         <ul className="mt-4 flex gap-2">
           <li>
             <Button className="cursor-pointer" variant="outline" size="sm" onClick={() => window.open(ResumePdf, '_blank', 'noopener,noreferrer')}>
-              Resume <Download />
+              Resumé <Download />
             </Button>
           </li>
           <li>
